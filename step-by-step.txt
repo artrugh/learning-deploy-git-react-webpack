@@ -1,0 +1,81 @@
+DEPLOY REACT
+
+if you want to store in git only the static folder- PROD-ENV
+
+1-
+npm install gh-pages --save-dev
+
+2-
+create a repo in gitHub
+
+3-
+
+git remote add origin <name-repo>
+
+4-
+in package.json
+
+"homepage": "https://user_name.github.io/name_repo",
+
+in script 
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
+change router browser to hashbrowsee
+
+5-
+npm run deploy 
+
+
+IF YOU WANT TO STORE THE DEV-ENV
+
+1-
+git init
+git add.
+git commit -m "message"
+git remote add nameofthe repo
+git push -u origin master
+
+2-
+npm install gh-pages --save-dev
+
+3-
+in package.json
+
+"homepage": "https://user_name.github.io/name_repo",
+
+in script 
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
+change router browser to hashbrowsee
+
+5-
+npm run deploy 
+
+6- if URL doesn't work
+
+git add.
+git commit -m "message"
+git push -u origin master
+
+
+
+DEPLOY IN WEB PACK
+
+1- web pack.config.js
+
+    mode: 'development',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
+    }
+
+2-
+npm run build
+
+3-go to gitHub/Repo/Settings/GitPages
+
+DONE
